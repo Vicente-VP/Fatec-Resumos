@@ -21,13 +21,30 @@ Existem inúmeras estruturas para lidar com diferentes situações.
 
 ### Ponteiros
 
+Mover estruturas de dados pela memória pode ser um processo demorado e caro. Imagine, por exemplo, um array que contém dados de 1000000 clientes de uma serviço. Seria ineficiente criar uma cópia dos dados _toda vez_ que fosse passado para uma função. Por isso existem ponteiros.
+
+Um ponteiro carrega o endereço de memória do valor verdadeiro. Em C, cria-se um ponteiro com o prefixo `&`, enquanto `*` é usado para denotar o tipo do ponteiro e desreferenciar o seu valor.
+
+```c
+// Função que aceita um ponteiro
+void func(int *values[]) {
+  for (int i = 0; i < len(values); i++) 
+    printf("%d ", *values[i]); // Acessando o valor do ponteiro
+}
+
+int main(void) {
+  int values[] = {1, 2, 3, 4}
+  func(&values); // Criando um ponteiro de uma variável
+}
+```
+
 ### Structs
 
 ### Peculiaridades do C
 
+- array assignment
 - strcpy
 - `->` vs `.`
-- array assignment
 - define, include
 
 ### Listas ligadas

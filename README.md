@@ -47,7 +47,7 @@ struct person {
   char *name[50];
   int age;
   char gender;
-  person *friends[];
+  struct person *friends[];
 }
 
 typedef struct person Pessoa
@@ -128,8 +128,8 @@ struct info {
 }
 
 struct node {
-  node* next;
-  info* data;
+  struct node* next;
+  struct info* data;
 }
 
 typedef ...

@@ -120,4 +120,45 @@ Existem algumas sintaxes que começam com _'#'_, chamadas de diretivas.
 
 ### Listas ligadas
 
+Um _"proto-vetor"_. Consiste em uma estrutura muito simples: um objeto tem um bloco de dados e uma referência ao próximo. Por criar uma corrente de nós (nós, elos, nodes, tanto faz), é possível criar uma funcionalidade de lista.
+
+```c
+struct info {
+  // ...
+}
+
+struct node {
+  node* next;
+  info* data;
+}
+
+typedef ...
+```
+
+Para utilizar uma lista ligada, podemos criar funções de _construtor_ e de _append_:
+
+```c
+Node* ll_init(void) { return NULL; }
+
+Node* ll_append(Node* n, Info* i) {
+  Node* new = (Node*) malloc(sizeof(Node))
+  new->info = i;
+  new-> next = n;
+  return novo;
+}
+```
+
+A partir disso podemos utilizar as funções no main:
+
+```c
+Node n = ll_init();
+n = ll_append(n, new_info(1));
+n = ll_append(n, new_info(2));
+n = ll_append(n, new_info(3));
+n = ll_append(n, new_info(4));
+n = ll_append(n, new_info(5));
+```
+
+Toda vez que um novo valor é adicionado, este se torna o novo início da lista. Então, no exemplo acima, a lista teria uma configuração como a seguinte: `5 -> 4 -> 3 -> 2 -> 1 -> NULL`. A variável `n` não representa a lista como um todo, mas apenas um elo.
+
 ### Mapas de memória

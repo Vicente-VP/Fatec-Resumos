@@ -160,5 +160,3 @@ n = ll_append(n, new_info(5));
 ```
 
 Toda vez que um novo valor é adicionado, este se torna o novo início da lista. Então, no exemplo acima, a lista teria uma configuração como a seguinte: `5 -> 4 -> 3 -> 2 -> 1 -> NULL`. A variável `n` não representa a lista como um todo, mas apenas um elo.
-
-### Mapas de memória

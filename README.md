@@ -96,8 +96,27 @@ int main(void) {
 }
 ```
 
-- `->` vs `.`
-- define, include
+#### `struct` vs `struct*`
+
+Ao lidar com struct _'diretamente'_, usamos o operador `.` para acessar seus atributos. Agora, quando lidamos com ponteiros, usamos `->`. Não existe razão para essa distinção, mas a vida é assim ¯\\\_(ツ)\_/¯.
+
+#### Diretivas
+
+Existem algumas sintaxes que começam com _'#'_, chamadas de diretivas.
+
+`#define` declara em tempo de compilação uma constante imutável. Geralmente usada para valores matemáricos com pi, e, sqrt_2 etc.
+
+```c
+#define PI 3.14159;
+```
+
+`#inlcude` importa outros arquivos C ou [headers (não se preocupe por enquanto)](https://www.gnu.org/software/c-intro-and-ref/manual/html_node/Header-Files.html). Podemos incluir bibliotecas de sistema com `<...>` ou um arquivo do diretório com `"..."`.
+
+```c
+#include <stdlib.h>
+#include <stdio.h>
+#include "custom_logic.c"
+```
 
 ### Listas ligadas
 

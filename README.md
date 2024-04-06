@@ -28,7 +28,7 @@ Um ponteiro carrega o endereço de memória do valor verdadeiro. Em C, cria-se u
 ```c
 // Função que aceita um ponteiro
 void func(int *values[]) {
-  for (int i = 0; i < len(values); i++) 
+  for (int i = 0; i < len(values); i++)
     printf("%d ", *values[i]); // Acessando o valor do ponteiro
 }
 
@@ -40,10 +40,62 @@ int main(void) {
 
 ### Structs
 
+C, assim como qualquer linguagem com tipos estáticos, precisa de um _template_ para criar estruturas de dados. Para isso existe o `struct`. Primeiro declara-se a estrutura e seus atributos, como se fossem variáveis de uma função. Depois, geralmente se declara um tipo com `typedef` ao redor da estrutura.
+
+```c
+struct person {
+  char *name[50];
+  int age;
+  char gender;
+  person *friends[];
+}
+
+typedef struct person Pessoa
+```
+
+Geralmente, ao trabalhar com estruturaas, usa-se ponteiros. É comum ter uma função que inicializa uma estrutura, um _pseudo-construtor_. E para inicializar uma estrutura, é **necessário alocar espaço na memória** com a função `malloc`, passando o tamanho desejado. Para acessar um atributo, podemos usar a setinha `->`.
+
+```c
+Person *person_init(char *name[50], int age, char gender) {
+  Person *new = (Person *)malloc(sizeof(Person));
+  new->age = age;
+  new->gender = gender;
+  strcpy(new->name, name);
+  return new;
+}
+```
+
+Vamos explicar a primeira linha da função:
+
+- Primeiro declaramos a variável `new` com tipo `Person *`. Poderíamos ter dado qualquer nome à variável;
+- Depois buscamos espaço na memória com `malloc`. Sabemos qual o tamanho certo com `sizeof(Person)`;
+- Antes de atribuir o valor, convertemos para um ponteiro de Person com `(Person *)`. Essa sintaxe é usada para a converter de tipos em C.
+
 ### Peculiaridades do C
 
-- array assignment
-- strcpy
+#### Atribuição de arrays e `strcpy`
+
+É impossível atribuir um valor literal a um array depois que ele foi declarado.
+
+```c
+int values[] = {1, 2, 3, 4};
+values = {5, 6, 7, 8}; // Gera erro de compilação
+```
+
+Um efeito colateral disso é que é impossível atribuir um valor a uma string depois de ser inicializada. No caso de uma estrutura, declaramos a string em malloc. Uma utilidade neste caso é a função `strcpy` (_string copy_):
+
+```c
+char* strcpy(char* destino, char* fonte) {
+  // mágica (∩｀-´)⊃━☆ﾟ.*･｡ﾟ
+}
+
+int main(void) {
+  char* fonte = "Somebody once told me the world is gonna roll me\nI ain't the sharpest tool in the shed\nShe was looking kind of dumb with her finger and her thumb\nIn the shape of an \"L\" on her forehead";
+  char* copia;
+  strcpy(copia, fonte);
+}
+```
+
 - `->` vs `.`
 - define, include
 

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Carrinho de Compras Dinâmico</title>
+</head>
+<body>
+    <h2>Adicionar Produto</h2>
+    <form id="productForm">
+        Nome do Produto: <input type="text" id="productName"><br>
+        Preço: <input type="number" id="productPrice"><br>
+        Quantidade: <input type="number" id="productQuantity" min="1" value="1"><br>
+        <button type="submit" >Adicionar ao Carrinho</button>
+    </form>
+
+    <h2>Carrinho</h2>
+    <div id="cart">
+        <!-- Os itens do carrinho serão listados aqui -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -15,7 +15,7 @@ Capacidade de um objeto assumir diferentes formas, ou seja, uma operação pode 
 - **Conta**: É uma Classe abstrata com atributos e métodos comuns a outras contas bancárias.
   - **Herança**: As Classes `ContaPoupança` e `ContaCorrente` herdam de `Conta`, logo são subclasses de `Conta`
   - **Polimorfismo**: O `método` abstrato depositar é implementado nas duas classes `ContaPoupança` e `ContaCorrente` de forma diferentes, permitindo que essas classes tenham comportamentos diferentes para depósitos
-  - **Abstração**: Por ela ser uma Clsse abstrata ela ão pode ser instanciada. Ela define um contrato para as asubclasses, definindo que ela implementem o `método`  depositar.
+  - **Abstração**: Por ela ser uma Clsse abstrata ela não pode ser instanciada. Ela define um contrato para as asubclasses, definindo que ela implementem o `método`  depositar.
 
 - **ContaCorrente**: É uma classe que herda de Conta e implementa de Tributável.
   - **Herança**: A classe herdas os métodos e s atributos da classe `Conta`, além disso ela possui comportamentos específicos, como cobrar uma taxa de 0,20 em saques

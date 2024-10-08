@@ -18,13 +18,13 @@ Capacidade de um objeto assumir diferentes formas, ou seja, uma operação pode 
   - **Abstração**: Por ela ser uma Clsse abstrata ela não pode ser instanciada. Ela define um contrato para as subclasses, definindo que elas implementem o `método`  depositar.
 
 - **ContaCorrente**: É uma classe que herda de Conta e implementa de Tributável.
-  - **Herança**: A classe herdas os métodos e s atributos da classe `Conta`, além disso ela possui comportamentos específicos, como cobrar uma taxa de 0,20 em saques
+  - **Herança**: A classe herda os métodos e s atributos da classe `Conta`, além disso ela possui comportamentos específicos, como cobrar uma taxa de 0,20 em saques
   - **Interface**: Implementa a classe Tributável(Interface), `obrigando` ela a implementar a classe getValorImposto()
-  - **Polimorfismo**: COmo a classe `ContaCorrente` implementa Tributável, ela pode ser usada em qualquer lugar que o contexto exija um `Tributavel`, como no método `CalcularImposto` 
+  - **Polimorfismo**: Como a classe `ContaCorrente` implementa Tributável, ela pode ser usada em qualquer lugar que o contexto exija um `Tributavel`, como no método `calcularImposto` 
 
 - **ContaPoupança**: É uma classe que herda de `Conta`, mas não implementa `Tributavel`.
   - **Herança**: Ela herda os métodos e atributos de `Conta` e implementa o método `depositar`, adaptando pra sua lógica específica.
-  - **Polimorfismo**: O polimorfismo se aplica no método `depositar`, já que ele pode se comportar de maneira diferente em ca uma das classes.
+  - **Polimorfismo**: O polimorfismo se aplica no método `depositar`, já que ele pode se comportar de maneira diferente em cada uma das classes.
 
 - **CalcularImposto**: Ela é reponsável por calcular a soma dos impostos de objetos que implementam a `Interface` Tributável
   - **Interface**: O método `calcularImposto(Tributavel tributo)` demonstra a utilização de uma interface, já que ele pode receber qualquer objeto que implemente a `Interface` Tributável.
@@ -32,10 +32,10 @@ Capacidade de um objeto assumir diferentes formas, ou seja, uma operação pode 
 
 - **SeguroDeVida**: A classe `SeguroDeVida` implementa a Interface `Tributavel`.
   - **Interface**: A classe implementa obrigatóriamente  o método `getValorImposto` para calcular o valor do imposto fixo de 42 reais
-  - **Polimorfismo**: Assim como na classe `ContaCorrente` esta classe pode ser tratada como um `Tributavel`, logo ela pode ser usada no método de `CalcularImposto`.
+  - **Polimorfismo**: Assim como na classe `ContaCorrente` esta classe pode ser tratada como um `Tributavel`, logo ela pode ser usada no método de `calcularImposto`.
 
 - **Tributavel**: Essa classe é uma `Interface` que define um método chamado `getValorImposto`
-  - **Polimorfismo**: Ele ocorre, pois diferentes classes podem implementar a interface `Tributavel` e fornecer suas próprias  versões do método `getValorImposto`. Esse comportamento permite que o método `Calcular impostos` da classe `CalcularImposto` trabalhae com qualquer onjeto que implemente `Tributavel`, sem se preocuar com o seu tipo.
+  - **Polimorfismo**: Ele ocorre, pois diferentes classes podem implementar a interface `Tributavel` e fornecer suas próprias  versões do método `getValorImposto`. Esse comportamento permite que o método `calcularImposto` da classe `CalcularImposto` trabalhe com qualquer objeto que implemente `Tributavel`, sem se preocupar com o seu tipo.
 
 <h2 align='center'>Resumo dos Conceitos</h2>
 

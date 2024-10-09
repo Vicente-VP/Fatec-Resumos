@@ -18,8 +18,8 @@ Capacidade de um objeto assumir diferentes formas, ou seja, uma operação pode 
   - **Abstração**: Por ela ser uma Clsse abstrata ela não pode ser instanciada. Ela define um contrato para as subclasses, definindo que elas implementem o `método`  depositar.
 
 - **ContaCorrente**: É uma classe que herda de Conta e implementa de Tributável.
-  - **Herança**: A classe herda os métodos e s atributos da classe `Conta`, além disso ela possui comportamentos específicos, como cobrar uma taxa de 0,20 em saques
-  - **Interface**: Implementa a classe Tributável(Interface), `obrigando` ela a implementar a classe getValorImposto()
+  - **Herança**: A classe herda os métodos e atributos da classe `Conta`, além disso ela possui comportamentos específicos, como cobrar uma taxa de 0,20 em saques
+  - **Interface**: Implementa a classe Tributável(Interface), `obrigando` ela a implementar a método getValorImposto()
   - **Polimorfismo**: Como a classe `ContaCorrente` implementa Tributável, ela pode ser usada em qualquer lugar que o contexto exija um `Tributavel`, como no método `calcularImposto` 
 
 - **ContaPoupança**: É uma classe que herda de `Conta`, mas não implementa `Tributavel`.

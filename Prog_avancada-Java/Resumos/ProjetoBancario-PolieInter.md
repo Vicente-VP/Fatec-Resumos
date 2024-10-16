@@ -39,7 +39,7 @@ Capacidade de um objeto assumir diferentes formas, ou seja, uma operação pode 
 
 <h2 align='center'>Resumo dos Conceitos</h2>
 
-1. <h3>Herança: ContaCorrente e ContaPoupnaça herdam da classe Conta, aproveitando seus atributos e métodos</h3>
+1. <h3>Herança: ContaCorrente e ContaPoupança herdam da classe Conta, aproveitando seus atributos e métodos</h3>
 
 2. <h3>Interface: A interface Tributavel define um contrato para calculo de impostos que é implementado pelas classes SeguroDeVida e ContaCorrente</h3>
 

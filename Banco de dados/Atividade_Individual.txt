@@ -1,0 +1,68 @@
+Formatos de Arquivos 
+
+Dados podem ser armazenados em um arquivo 
+
+Estruturas especificas facilitam o armazenamento: 
+	-Escrita
+	-Leitura
+
+
+Exemplos de formatos: JSON, XML, Texto/CSV, ORC/Parquet, Planilhas.
+
+Sistemas de Arquivos (Software que faz uma gestão)
+
+Geralmente são armazenados fisicamente:
+	-Segurança
+	-Versionamento
+	Metadados
+	Exemplos: NFTS
+Sistemas de Arquivos distribuidos:
+	Caracteristicas especiais parasistemas distribuidos 
+	Exemplo HDFS
+
+Sistemas gerenciadores de dados - gerenciam os dados, verificam se o usuário tem permissão de acessar os dados
+	-operações de leitura, inclusão, exclusão de dados
+
+NoSQL -
+	Tipos de familias
+		Documentos
+		Chave-Valor
+		Orientado a coluna 
+		Grafos
+
+Documento - Mais popular
+	Estrutura em formato JSON (semelhante a um arquivo XML)
+	Exemplo: MongoDB
+
+Chave-Valor - armazena uma estrutura simples: chave Valor
+	Usamos por exemplo para sessões de website, ranking de jogos
+	
+Orientado a coluna
+	Armazena dados por colunas ao invés de linhas
+	Ótimo para aplicações analíticas
+	Exemplo Amazon Redshift
+
+Grafos
+	Formado por vértices e arestas 
+	Analise de redes sociais, dissiminação de doenças, menor trajeto
+	Exemplo Neo4j
+
+Busca - Sistema que indexam documentos e permitem buscas
+	Indexar processos
+	Suportam erros de digitação, sinonimos 
+	Exemplo Elasticsearch
+
+Processamento - não são sistemas que armazenam dados 
+	Sistemas especializados em computação
+	Alta performace 
+	Não são gerenciadores de banco de dados 
+	Exemplos Spark, Pig
+
+Streaming
+	Capaz de processar os dados a medida que são produzidos 
+	Em tempo real ou próximo ao tempo real 
+	Kinesis (aws)
+
+Ecossistema Hadoop - Conjusto vasto de ferramentas (engenharia de dados) mantidas pela fundação apache
+
+
